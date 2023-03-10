@@ -25,7 +25,7 @@ The program, called push_swap, takes a list of integers and sorts it using a set
 <ins>3. Parsing</ins>
 *   receive the arguments via ``ft_atoi`` and 
 *   error management
-*     doubles
+     *  doubles
 *      
 *   creation of the linked list
 
