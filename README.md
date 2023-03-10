@@ -20,13 +20,13 @@ The predefines operations are the following:
 |      sa       | swaps first two elements of stack A                  |
 |      sb       | swaps first two elements of stack B                  |
 |      ss       | sa and sb at the same time                           |
-|      pa       | pops the first elememt on B and puts it on top of A  |
-|      pb       | pops the first elememt on A and puts it on top of B  |
-|      ra       | rotates stuck A up by one                            |
-|      rb       | rotates stuck B up by one                            |
+|      pa       | pops the first elememt of B and puts it on top of A  |
+|      pb       | pops the first elememt of A and puts it on top of B  |
+|      ra       | rotates stack A up by one, the first element becomes the last one |
+|      rb       | rotates stack B up by one, the first element becomes the last one |
 |      rr       | rotates both A and B up by one                       |
-|      rra      | rotates stuck A down by one                          |
-|      rrb      | rotates stuck B down by one                          |
+|      rra      | rotates stack A down by one, the last element becomes the first one |
+|      rrb      | rotates stack B down by one, the last element becomes the first one |
 |      rrr      | rotates both A and B down by one                     |
 
 ## Divide and Conquer 
