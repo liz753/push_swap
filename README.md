@@ -1,10 +1,10 @@
-# push_swap
+# push_swap with Radix Sort 
 42 Project about sorting algorithms. 
 
 ## Table of Contents
 
 * [Project Overview](#project-overview)
-* [Divide and Conquer](#divide-and-conquer)
+* [To-Do](#to-do)
 * [Result](#result)
 * [Tips for 42 students](#tips-for-42-students)
 * [What I learned](#what-i-learned)
@@ -29,39 +29,59 @@ The predefines operations are the following:
 |      rrb      | rotates stack B down by one, the last element becomes the first one |
 |      rrr      | rotates both A and B down by one                     |
 
-## Divide and Conquer 
+## To Do
 
 <ins>1. Research</ins>
-*   concept of sorting algorithms
+*   stack in C 
+*   difference and advantages of using an array or simply, doubly and doubly circular linked list 
+*   different sorting algorithms
+*   Big O Notation 
 
 <ins>2. Code Structure</ins>
 *   creating a Makefile that doesn't relink
 *   creating a header file 
 
 <ins>3. Parsing</ins>
-*   receive the arguments via ``ft_atoi`` and 
+*   receive the arguments via ``ft_atoi`` and if the requirements of the arguments are fullfilled 
+*   handels "1 2 3" as well as 1 2 3 as input 
 *   error management
+     *  only numbers and spaces 
      *  doubles
-*   handels "1 2 3" as well as 1 2 3 
+     *  ``INT_MAX`` and ``INT_MIN``
+     *  edge cases: think about what to do with "-0", "--", "1-2" and ""
+     *  the subject specifies that in case of error you need to send "Error\n" on the standard error. However, I entered customized error messages              because it's easier to debug in case sth doesn't work. I deleted them in the end for the evaluation.
+*   
 
 
 <ins>4. Implementation</ins>
 *   creation of the linked list
-
+*   create the functions for ``push``, ``rotate`` and ``swap``, then create the respective function for all the operations
+*   handle the already sorted numbers, just return in this case
+*   function for two numbers
+*   function for three numbers (only 6 possibilites)
+*   function for four and five numbers - I divide my list and check whether the smallest number is in the first half or the second, then I push this part     in ``stack_b``, sort them and put them back together
+*   function for more than five numbers - here I use Radix Sort: a sorting algorithm that doesn't compare the numbers, but sort them by distributing them     in buckets according to their radix (base or better unique digits, e.g. 0 through 9 in the decimal system or 0 and 1 in the binary numeral system)
+     *  adding an index to the nodes, this is necessary with Radix Sort since it's only working with positive numbers
+     *  coding a while in a while, adding the binary comparison to it and sending all the numbers where the result after the comparison with 1 is 0 to           the ``stack_b`` and rotate the others in ``stack_a``, after having seen all the numbers, putting back the nodes from ``stack_b`` to ``stack_a``,         after the while the same operation will take place with the second unique digit, thus ``bit_pos *= 2;``, sorting condition is the sorted list
+*   free the allocated memory before the exits 
 
 ## Result 
 
 Examples with [push swap visualizer](https://github.com/o-reo/push_swap_visualizer) 
-50 
+5 
 
 100
 
 500 
 
+Big O Notation of Radix Sort is O(k * (b + n)), where k stands for the digits of the biggest number, b for the base and n for the amount of numbers.
+Overall, it has a very good performance because the algorithm is only called the k times 
 
 ## Tips for 42 students 
 *   this project is perfect if you want to deepen your understanding about linked lists, if you want to refresh your knowledge about linked lists, I recommand this [video from the CS50 cours](https://www.youtube.com/watch?v=2T-A_GFuoTo)
+*   during my research, I found this beautiful video on youtube which is gold for the general introduction to sorting algorithms (https://www.youtube.com/watch?v=WaNLJf8xzC4), although they don't cover Radix Sort and Divide and Conquer
 *   
+*   if you want to generate random numbers to test your code, you can use the cmd ``jot -r 100 -100 100`` or the string version ``jot -r -s " " 100 -100 100`` in the terminal 
 
 
 ## What I learned 
