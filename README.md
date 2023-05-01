@@ -42,7 +42,8 @@ The predefined operations are the following:
 *   creating a header file 
 
 <ins>3. Parsing</ins>
-*   receive the arguments via ``ft_atoi`` and if the requirements of the arguments are fullfilled 
+*   receive the arguments via ``ft_split`` 
+Check if the following requirements of the arguments are fullfilled:
 *   handles "1 2 3" as well as 1 2 3 as input 
 *   error management
      *  only numbers and spaces 
@@ -50,7 +51,7 @@ The predefined operations are the following:
      *  numbers between ``INT_MIN`` and ``INT_MAX``
      *  edge cases: think about what to do with "-0", "--", "1-2" and ""
      *  the subject specifies that in case of error you need to send "Error\n" on the standard error. However, I entered customized error messages              because it's easier to debug in case sth doesn't work. I deleted them in the end for the evaluation.
-*   
+*   convert the arguments from string to int 
 
 
 <ins>4. Implementation</ins>
@@ -89,9 +90,10 @@ Overall, it has a very good performance because the algorithm is only called k t
 ## Tips for 42 students 
 *   this project is perfect if you want to deepen your understanding about linked lists, if you want to refresh your knowledge about linked lists, I recommand this [video from the CS50 cours](https://www.youtube.com/watch?v=2T-A_GFuoTo)
 *   during my research, I found this beautiful video on youtube which is gold for the general introduction to sorting algorithms (https://www.youtube.com/watch?v=WaNLJf8xzC4), although they don't cover Radix Sort and Divide and Conquer
-*   
-*   if you want to generate random numbers to test your code, you can use the cmd ``jot -r 100 -100 100`` or the string version ``jot -r -s " " 100 -100 100`` in the terminal 
+*   if you want to generate random numbers to test your code, you can use the cmd ``jot -r 100 -100 100`` or the string version ``jot -r -s " " 100 -100 100`` in the terminal
 
 
 ## What I learned 
+The "push_swap" project was an excellent opportunity for me to learn about different sorting algorithms, data structures, and the importance of optimizing code for efficiency. Between the different sorting algorithms, I opted for the radix sort, because I have never heard of it before and I was intrigued to understand how it works. Its performance characteristics are lower than another popular algorithm, which is a combination of quick and merge sort, but it sorts in an interesting way. I simply found the algorithm neat.
 
+Additionally, the "push_swap" project emphasized the significance of selecting the appropriate data structure for a given problem. As stated in the subject, I had to implement two stacks and I chose to do so using two simply linked lists because I found it to be the most logical option since we only have the limited set of operations mentioned above.
