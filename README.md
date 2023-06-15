@@ -14,9 +14,9 @@
 
 Git clone the repository and use ``make`` to compile.
 
-Then run it with ``./push_swap´´ followed by different numbers, positive or negative. For example:
+Then run it with ``./push_swap`` followed by different numbers, positive or negative. For example:
 
-``./push_swap´´ -2147483648 100 75 3 2147483647 0``
+``./push_swap -2147483648 100 75 3 2147483647 0``
 
 If the arguments are valid, the program will output the most efficient list of actions to sort the list.
 
